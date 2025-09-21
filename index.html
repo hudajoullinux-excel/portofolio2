@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Muh. Nurul Huda</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #f4f4f9; color: #333; line-height: 1.6; overflow-x: hidden; }
+
+    .container {
+      display: flex;
+      max-width: 1100px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Sidebar gradasi biru */
+    .sidebar {
+      background: linear-gradient(180deg, #0c2d7a, #1e90ff);
+      color: white;
+      padding: 20px;
+      width: 35%;
+    }
+
+    .sidebar h3 {
+      background: #ffd500;
+      color: #000;
+      padding: 5px 10px;
+      margin-top: 15px;
+      border-radius: 5px;
+      display: flex; align-items: center; gap: 8px;
+      cursor: pointer;
+    }
+    .sidebar h3 i { color: #0c2d7a; transition: all 0.3s ease; }
+    .sidebar h3:hover i { color: white; transform: scale(1.2); }
+
+    .profile img {
+      width: 150px; height: 150px; border-radius: 50%;
+      display: block; margin: 0 auto 10px;
+      border: 4px solid white; object-fit: cover;
+      transition: all 0.4s ease;
+    }
+    .profile img:hover { transform: scale(1.1); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+    .profile h2 { text-align: center; margin-top: 10px; font-size: 20px; }
+
+    .contact p, .biodata p { margin: 8px 0; display: flex; align-items: center; gap: 8px; }
+    .contact i, .biodata i, .skills i { color: #ffd500; font-size: 16px; width: 20px; text-align: center; }
+
+    .skills ul { list-style: none; margin-top: 10px; padding: 0; }
+    .skills li { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+
+    /* Konten */
+    .content { flex: 1; padding: 20px; }
+    .content h3 {
+      background: #ffd500; color: #000;
+      padding: 5px 10px; border-radius: 5px 5px 0 0;
+      margin: 15px 0 5px 0;
+      display: flex; align-items: center; gap: 8px;
+      cursor: pointer; transition: background 0.3s ease;
+    }
+    .content h3 i { color: #0c2d7a; transition: all 0.3s ease; }
+    .content h3:hover { background: #0c2d7a; color: white; }
+    .content h3:hover i { color: #ffd500; transform: scale(1.2); }
+
+    .divider { height: 2px; background: #ccc; margin: 0 0 10px 0; }
+    ul { list-style: none; padding-left: 15px; }
+    ul li { margin-bottom: 8px; position: relative; }
+    ul li::before { content: "•"; color: #0c2d7a; font-weight: bold; position: absolute; left: -15px; }
+
+    /* Efek animasi saat scroll */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    .fade-left { transform: translateX(-40px); }
+    .fade-left.active { transform: translateX(0); opacity: 1; }
+
+    .fade-right { transform: translateX(40px); }
+    .fade-right.active { transform: translateX(0); opacity: 1; }
+
+    .fade-up { transform: translateY(40px); }
+    .fade-up.active { transform: translateY(0); opacity: 1; }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .sidebar { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile reveal fade-up">
+        <img src="profil.jpg" alt="Foto Profil">
+        <h2>MUH. NURUL HUDA</h2>
+      </div>
+
+      <section class="biodata reveal fade-left">
+        <h3><i class="fa-solid fa-id-card"></i> Biodata</h3>
+        <p><i class="fa-solid fa-calendar"></i> Pekalongan, 29 Maret 1985</p>
+        <p><i class="fa-solid fa-person"></i> Laki-laki</p>
+        <p><i class="fa-solid fa-heart"></i> Menikah</p>
+        <p><i class="fa-solid fa-location-dot"></i> Jl. Sutan Syahrir No.20 Gg.20 Rt:03/03 Des. Pasisir Kec. Pekalongan Barat</p>
+      </section>
+
+      <section class="contact reveal fade-right">
+        <h3><i class="fa-solid fa-address-book"></i> Kontak</h3>
+        <p><i class="fa-solid fa-envelope"></i> hudajoulmnh@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 0823-1344-xxyy</p>
+        <p><i class="fa-brands fa-whatsapp"></i> 0823-1344-xxyy</p>
+      </section>
+
+      <section class="skills reveal fade-up">
+        <h3><i class="fa-solid fa-lightbulb"></i> Kemampuan</h3>
+        <ul>
+          <li><i class="fa-solid fa-file-word"></i> Microsoft Office</li>
+          <li><i class="fa-solid fa-paint-brush"></i> Design Graphic</li>
+          <li><i class="fa-solid fa-server"></i> IT Network Support</li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Konten -->
+    <main class="content">
+      <section class="reveal fade-up">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Pendidikan</h3>
+        <div class="divider"></div>
+        <ul>
+          <li>R.A. Muslimat Pasisari (1992)</li>
+          <li>MSI XVII Pabean (1998)</li>
+          <li>SMPN 8 Pekalongan (2002)</li>
+          <li>SMK Ma’arif NU Tirto Pekalongan (2005)</li>
+          <li>STMIK-WP Pekalongan (2009)</li>
+        </ul>
+      </section>
+
+      <section class="reveal fade-left">
+        <h3><i class="fa-solid fa-users"></i> Organisasi</h3>
+        <div class="divider"></div>
+        <ul>
+          <li>Wakil Ketua OSIS SMPN 8 Pekalongan (2001)</li>
+          <li>Wakil Ketua OSIS SMK SMART (2003)</li>
+          <li>Wakil Ketua Pradana SMK SMART (2003)</li>
+        </ul>
+      </section>
+
+      <section class="reveal fade-right">
+        <h3><i class="fa-solid fa-trophy"></i> Prestasi</h3>
+        <div class="divider"></div>
+        <ul>
+          <li>Peringkat 2 Cawu-3 Tk.III SMPN 8 (2001)</li>
+          <li>Peringkat 2 Semester-1 SMK SMART (2003)</li>
+          <li>Peringkat 3 Semester-6 SMK SMART (2005)</li>
+        </ul>
+      </section>
+
+      <section class="reveal fade-up">
+        <h3><i class="fa-solid fa-briefcase"></i> Pengalaman</h3>
+        <div class="divider"></div>
+        <ul>
+          <li>Karyawan TU di SMK SMART (2005)</li>
+          <li>Teknisi Lab Komputer di SMK SMART (2008)</li>
+          <li>Guru Produktif TKJ di SMK SMART (2009–sekarang)</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Intersection Observer untuk animasi saat scroll
+    const reveals = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active'); // muncul lagi saat scroll balik
+        }
+      });
+    }, { threshold: 0.2 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
